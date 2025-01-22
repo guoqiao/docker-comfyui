@@ -1,0 +1,14 @@
+ComfyUI/models/
+.env
+.envrc
+.gitignore
+README.md
+.git/
+.cache/
+.config/
+.direnv/
+.env/
+.envrc/
+.gitignore/
+.gitignore/
+.vscode/
