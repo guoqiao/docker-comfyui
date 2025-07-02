@@ -40,8 +40,8 @@ server: init
 		-p ${PORT}:${PORT} \
 		${app}:latest \
 		main.py \
-			--listen=0.0.0.0 \
-			--port=${PORT}
+		--listen=0.0.0.0 \
+		--port=${PORT}
 
 attach: init
 	docker exec -it ${app} bash
