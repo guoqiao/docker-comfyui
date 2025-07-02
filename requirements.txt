@@ -1,0 +1,5 @@
+pip
+
+huggingface_hub[hf_transfer]
+comfy-cli
+
