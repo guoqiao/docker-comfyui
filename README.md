@@ -2,6 +2,8 @@
 
 Run ComfyUI in Docker.
 
+![Hello ComfyUI](./hello-comfyui.png)
+
 ## Prerequisites
 
 - On Debian/Ubuntu Linux
