@@ -13,17 +13,16 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /ComfyUI
-
-ADD ComfyUI .
-
-RUN pip install -U -r requirements.txt
-RUN pip install -U -r custom_nodes/ComfyUI-Manager/requirements.txt
 
 ENV HF_HUB_ENABLE_HF_TRANSFER=1
 # a rust lib to dl faster
 RUN pip install -U \
     huggingface_hub[hf_transfer]
 
+WORKDIR /ComfyUI
+# the ComfyUI/models/ dir is not included here
+ADD ComfyUI .
+RUN pip install -U -r requirements.txt
+RUN pip install -U -r custom_nodes/ComfyUI-Manager/requirements.txt
 
 ENTRYPOINT ["/opt/conda/bin/python"]
