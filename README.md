@@ -24,7 +24,9 @@ cd docker-comfyui/
 git clone git@github.com:comfyanonymous/ComfyUI.git
 
 # optional, checkout a specific branch/tag/version
+cd ComfyUI/
 git checkout v0.3.43
+cd ..
 
 # build docker image
 make build
