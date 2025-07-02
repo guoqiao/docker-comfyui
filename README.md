@@ -29,7 +29,7 @@ git checkout v0.3.43
 # build docker image
 make build
 
-# run comfyui web server
+# run comfyui web server, GPU will be enabled in container if available
 make server
 
 # optional, attach to container to inspect
@@ -41,4 +41,5 @@ http://<IP>:8818
 
 ## ComfyUI Manager
 
-https://docs.comfy.org/essentials/custom_node_overview#comfyui-manager
+ComfyUI Manager is already integrated, refer to [doc](https://docs.comfy.org/essentials/custom_node_overview#comfyui-manager) for usage.
+
