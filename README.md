@@ -1,6 +1,6 @@
 # docker-comfyui
 
-Run ComfyUI in Docker.
+Run ComfyUI Web Server in Docker on Linux with Nvidia GPU Support.
 
 ![Hello ComfyUI](./hello-comfyui.png)
 
