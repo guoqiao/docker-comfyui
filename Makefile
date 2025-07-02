@@ -35,7 +35,7 @@ shell: init
 	${docker_run} ${app}:latest bash
 
 server: init
-	curl ip.me
+	echo "server url: http://$(shell curl -s ip.me):${PORT}"
 	${docker_run} \
 		-p ${PORT}:${PORT} \
 		${app}:latest \
