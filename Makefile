@@ -1,3 +1,6 @@
+include .env
+export
+
 app := comfyui
 
 platform := --platform=linux/amd64
@@ -14,6 +17,10 @@ PORT ?= 8818
 chown:
 	sudo chown -R ${user} .
 
+init:
+	touch .env
+	make chown
+
 prune:
 	docker image prune -f
 
@@ -24,13 +31,10 @@ build: prune
 build-no-cache:
 	export NO_CACHE=--no-cache; make build
 
-.env:
-	touch .env
-
-shell: .env
+shell: init
 	${docker_run} ${app}:latest bash
 
-server: .env
+server: init
 	curl ip.me
 	${docker_run} \
 		-p ${PORT}:${PORT} \
@@ -39,5 +43,5 @@ server: .env
 			--listen=0.0.0.0 \
 			--port=${PORT}
 
-attach: .env
+attach: init
 	docker exec -it ${app} bash
