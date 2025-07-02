@@ -2,6 +2,15 @@
 
 Run ComfyUI in Docker.
 
+## Prerequisites
+
+- On Debian/Ubuntu Linux
+- install Docker
+- install Nvidia GPU Driver
+- install Nvidia Container Toolkit
+
+refer to `scripts/` dir.
+
 ## Quick Start
 
 ```
