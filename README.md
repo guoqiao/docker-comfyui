@@ -30,6 +30,9 @@ make build
 # run comfyui web server
 make server
 
+# optional, attach to container to inspect
+make attach
+
 # open web server in browser
 http://<IP>:8818
 ```
