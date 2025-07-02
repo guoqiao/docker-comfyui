@@ -1,5 +1,29 @@
 # docker-comfyui
 
+Run ComfyUI in Docker.
+
+## Quick Start
+
+```
+# clone this repo
+git clone git@github.com:guoqiao/docker-comfyui.git
+cd docker-comfyui/
+
+# clone comfyui repo
+git clone git@github.com:comfyanonymous/ComfyUI.git
+
+# optional, checkout a specific branch/tag/version
+git checkout v0.3.43
+
+# build docker image
+make build
+
+# run comfyui web server
+make server
+
+# open web server in browser
+http://<IP>:8818
+```
 
 ## ComfyUI Manager
 
